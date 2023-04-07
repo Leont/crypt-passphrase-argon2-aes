@@ -1,8 +1,9 @@
 ---
-abstract: 'INSERT YOUR ABSTRACT HERE'
+abstract: 'A peppered AES-encrypted Argon2 encoder for Crypt::Passphrase'
 author:
   - 'Leon Timmermans <leont@cpan.org>'
-build_requires: {}
+build_requires:
+  Test::More: '0'
 configure_requires:
   Module::Build::Tiny: '0.039'
 dynamic_config: 0
@@ -15,10 +16,15 @@ name: Crypt-Passphrase-Argon2-AES
 provides:
   Crypt::Passphrase::Argon2::AES:
     file: lib/Crypt/Passphrase/Argon2/AES.pm
-    version: '0.000'
+    version: '0.001'
 requires:
+  Carp: '0'
+  Crypt::Passphrase: '0.010'
+  Crypt::Passphrase::Argon2::Encrypted: '0'
+  Crypt::Rijndael: '0'
+  parent: '0'
   strict: '0'
   warnings: '0'
-version: '0.000'
+version: '0.001'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
 x_spdx_expression: 'Artistic-1.0-Perl OR GPL-1.0-or-later'
