@@ -9,7 +9,7 @@ use parent 'Crypt::Passphrase::Argon2::Encrypted';
 use Crypt::Passphrase 0.010 -encoder;
 
 use Carp 'croak';
-use Crypt::Rijndael;
+use Crypt::Rijndael 1.16;
 
 my %mode = (
 	'aes-cbc' => Crypt::Rijndael::MODE_CBC,
