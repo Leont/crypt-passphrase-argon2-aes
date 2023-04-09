@@ -23,9 +23,9 @@ sub new {
 	my ($class, %args) = @_;
 	my $peppers = $args{peppers} or croak('No peppers given');
 	$args{active} //= (sort {; no warnings 'numeric'; $b <=> $a || $b cmp $a } keys %{ $peppers })[0];
-	my $mode = $args{mode} // 'cbc';
+	my $mode = delete $args{mode} // 'cbc';
 	my $cipher = "aes-$mode";
-	croak("No such cipher $cipher") if not exists $mode{$cipher};
+	croak("No such mode $mode") if not exists $mode{$cipher};
 	my $self = $class->SUPER::new(%args, cipher => $cipher);
 	$self->{peppers} = $peppers;
 	return $self;
