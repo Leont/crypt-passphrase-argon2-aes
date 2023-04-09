@@ -1,0 +1,6 @@
+*.bak
+*.swp
+*.swo
+*.tdy
+*.tar.gz
+Crypt-Passphrase-Argon2-AES-*
