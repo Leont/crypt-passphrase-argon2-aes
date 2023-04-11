@@ -16,15 +16,15 @@ name: Crypt-Passphrase-Argon2-AES
 provides:
   Crypt::Passphrase::Argon2::AES:
     file: lib/Crypt/Passphrase/Argon2/AES.pm
-    version: '0.001'
+    version: '0.002'
 requires:
   Carp: '0'
   Crypt::Passphrase: '0.010'
   Crypt::Passphrase::Argon2::Encrypted: '0'
-  Crypt::Rijndael: '0'
+  Crypt::Rijndael: '1.16'
   parent: '0'
   strict: '0'
   warnings: '0'
-version: '0.001'
+version: '0.002'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
 x_spdx_expression: 'Artistic-1.0-Perl OR GPL-1.0-or-later'

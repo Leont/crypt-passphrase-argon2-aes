@@ -36,8 +36,8 @@ METHODS
 
       * active
 
-      This is the key of the active pepper. By default it will be the key
-      with the highest (numerical) value.
+      This is the identifier of the active pepper. By default it will be
+      the identifier with the highest (numerical) value.
 
       * mode
 
