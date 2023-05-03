@@ -45,6 +45,10 @@ sub decrypt_hash {
 	return Crypt::Rijndael->new($secret, $mode)->decrypt($raw, $iv);
 }
 
+sub supported_ciphers {
+	return keys %mode;
+}
+
 1;
 
 __END__

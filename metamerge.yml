@@ -5,3 +5,7 @@ resources:
     type: git,
     url: git://github.com/Leont/crypt-passphrase-argon2-aes.git
     web: https://github.com/Leont/crypt-passphrase-argon2-aes
+prereqs:
+  runtime:
+    requires:
+      Crypt::Passphrase::Argon2: 0.009
