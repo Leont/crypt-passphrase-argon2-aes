@@ -1,5 +1,6 @@
 Revision history for Crypt-Passphrase-Argon2-AES
 
+0.003     2023-05-04 15:24:54+0200
           - Make cipher part of peppered crypt identifiers
 
 0.002     2023-04-11 14:21:32+0200
