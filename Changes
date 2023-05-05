@@ -1,5 +1,7 @@
 Revision history for Crypt-Passphrase-Argon2-AES
 
+          - Adapt tests to latest Crypt::Passphrase::Argon2::Encrypted
+
 0.003     2023-05-04 15:24:54+0200
           - Make cipher part of peppered crypt identifiers
 
