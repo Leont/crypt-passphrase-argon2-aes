@@ -27,7 +27,11 @@ sub new {
 	my $cipher = "aes-$mode";
 	croak("No such mode $mode") if not exists $mode{$cipher};
 	my $self = $class->SUPER::new(%args, cipher => $cipher);
-	$self->{peppers} = $peppers;
+	for my $key (keys %{$peppers}) {
+		my $length = length $peppers->{$key};
+		die "Pepper $key has invalid length $length" if $length != 16 && $length != 24 && $length != 32;
+		$self->{peppers}{$key} = $peppers->{$key};
+	}
 	return $self;
 }
 
