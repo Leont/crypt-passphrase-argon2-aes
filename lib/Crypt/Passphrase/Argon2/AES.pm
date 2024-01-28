@@ -105,7 +105,7 @@ This is the mode that will be used with C<AES>. Values values are C<'ecb'>, C<'c
 
 =head1 AUTHOR
 
-Leon Timmermans <leont@cpan.org>
+Leon Timmermans <fawaka@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 

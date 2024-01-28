@@ -1,7 +1,7 @@
 {
    "abstract" : "A peppered AES-encrypted Argon2 encoder for Crypt::Passphrase",
    "author" : [
-      "Leon Timmermans <leont@cpan.org>"
+      "Leon Timmermans <fawaka@gmail.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "App::ModuleBuildTiny version 0.041",
