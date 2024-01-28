@@ -29,7 +29,7 @@ sub new {
 	my $self = $class->SUPER::new(%args, cipher => $cipher);
 	for my $key (keys %{$peppers}) {
 		my $length = length $peppers->{$key};
-		die "Pepper $key has invalid length $length" if $length != 16 && $length != 24 && $length != 32;
+		croak "Pepper $key has invalid length $length" if $length != 16 && $length != 24 && $length != 32;
 		$self->{peppers}{$key} = $peppers->{$key};
 	}
 	return $self;
