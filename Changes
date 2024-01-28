@@ -1,5 +1,7 @@
 Revision history for Crypt-Passphrase-Argon2-AES
 
+          - Test recode_hash behavior
+
 0.006     2023-11-17 07:16:01+0100
           - Add a length check for the peppers
 

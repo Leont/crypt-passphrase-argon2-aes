@@ -6,7 +6,7 @@ use warnings;
 our $VERSION = '0.006';
 
 use parent 'Crypt::Passphrase::Argon2::Encrypted';
-use Crypt::Passphrase 0.010 -encoder;
+use Crypt::Passphrase 0.019 -encoder;
 
 use Carp 'croak';
 use Crypt::Rijndael 1.16;

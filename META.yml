@@ -19,7 +19,7 @@ provides:
     version: '0.006'
 requires:
   Carp: '0'
-  Crypt::Passphrase: '0.010'
+  Crypt::Passphrase: '0.019'
   Crypt::Passphrase::Argon2::Encrypted: '0.009'
   Crypt::Rijndael: '1.16'
   parent: '0'
