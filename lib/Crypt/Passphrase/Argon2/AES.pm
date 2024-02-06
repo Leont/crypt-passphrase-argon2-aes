@@ -25,8 +25,9 @@ sub new {
 	$args{active} //= (sort {; no warnings 'numeric'; $b <=> $a || $b cmp $a } keys %{ $peppers })[0];
 	my $mode = delete $args{mode} // 'cbc';
 	my $cipher = "aes-$mode";
-	croak("No such mode $mode") if not exists $mode{$cipher};
-	my $self = $class->SUPER::new(%args, cipher => $cipher);
+	croak "No such mode $mode" if not exists $mode{$cipher};
+	my $self = $class->SUPER::new(%args, cipher => $cipher, salt_size => 16);
+	croak "Output size must be a double of 16 for CBC and ECB" if ($mode eq 'cbc' || $mode eq 'ecb') && $self->{output_size} % 16;
 	for my $key (keys %{$peppers}) {
 		my $length = length $peppers->{$key};
 		croak "Pepper $key has invalid length $length" if $length != 16 && $length != 24 && $length != 32;
@@ -102,6 +103,8 @@ This is the identifier of the active pepper. By default it will be the identifie
 This is the mode that will be used with C<AES>. Values values are C<'ecb'>, C<'cbc'> (the default), C<'cfb'>, C<'ofb'> and C<'ctr'>.
 
 =back
+
+The C<salt_size> is hard-coded to 16 bytes, and if C<mode> equals C<cbc> or C<ecb>, the C<output_size> must be a multiple of 16 bytes.
 
 =head1 AUTHOR
 
