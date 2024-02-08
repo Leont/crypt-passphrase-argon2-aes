@@ -17,7 +17,6 @@ my $passphrase = Crypt::Passphrase->new(
 		memory_cost => '16M',
 		time_cost   => 2,
 	},
-	validators => [ 'Argon2' ],
 );
 
 my $password = 'password';
